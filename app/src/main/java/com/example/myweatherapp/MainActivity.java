@@ -15,6 +15,7 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -73,15 +74,41 @@ public class MainActivity extends AppCompatActivity {
             public void onResponse(JSONObject response) {
                 try {
 // Test API Working:   http://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=cdcf768c71456152312d5dbeda863008
-                    JSONObject topLevel = response;
-                    JSONObject main = topLevel.getJSONObject("mai");
-                    String temp = main.getString("feels_like");
-                    textView.setText("Temp: " + temp + "C");
-
-                    // Basic JSON Pulling
-//                    JSONObject main = response.getJSONObject("main");
-//                    String temp = String.valueOf(main.getDouble("temp"));
+                      // Basic JSON Pull
+//                    JSONObject topLevel = response;
+//                    JSONObject main = topLevel.getJSONObject("main");
+//                    String temp = main.getString("feels_like");
 //                    textView.setText("Temp: " + temp + "C");
+
+                    // JSON Array Pull from Weather
+                    String condition = "",description = "";
+                    JSONObject topLevel = response;
+                    JSONArray jsonarray = new JSONArray(topLevel.getString("weather"));
+
+                    for(int i=0; i < jsonarray.length(); i++) {
+                        JSONObject jsonobject = jsonarray.getJSONObject(i);
+                        String id       = jsonobject.getString("id");
+                        condition    = jsonobject.getString("main");
+                        description  = jsonobject.getString("description");
+                        String icon = jsonobject.getString("icon");
+                    }
+
+                    // JSON Pulling
+                    JSONObject main = response.getJSONObject("main");
+                    String temp = String.valueOf(main.getDouble("temp"));
+                    String hum = String.valueOf(main.getDouble("humidity"));
+                    JSONObject wind = response.getJSONObject("wind");
+                    String speed = String.valueOf(wind.getDouble("speed"));
+
+                    textView.setText("Temp: " + temp + "C\n"
+                                    + "Humidity: " + hum + "%\n"
+                                    + "Wind Speed: " + speed + "knotts\n"
+                                    + "Weather: " + condition + "\n"
+                                    + "InDepth: " + description );
+
+
+
+                    
 //                    Toast.makeText(MainActivity.this, main.toString(), Toast.LENGTH_SHORT).show();
                 } catch (JSONException e) {
                     Log.e("Error", e.toString());
