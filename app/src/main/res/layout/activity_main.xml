@@ -7,14 +7,264 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/txtView_Weather"
-        android:layout_width="0dp"
-        android:layout_height="248dp"
-        android:layout_marginStart="70dp"
-        android:layout_marginEnd="70dp"
-        android:text="TextView"
+        android:id="@+id/txtViewLocation2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="285dp"
+        android:layout_marginBottom="554dp"
+        android:text="Weather"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtViewOption2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="287dp"
+        android:layout_marginEnd="75dp"
+        android:layout_marginBottom="420dp"
+        android:text="Conditions"
+        android:textColor="#3F51B5"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_Cond"
+        style="@style/Widget.AppCompat.TextView.SpinnerItem"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="319dp"
+        android:layout_marginEnd="81dp"
+        android:layout_marginBottom="372dp"
+        android:text="null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_Wind"
+        style="@style/Widget.AppCompat.TextView.SpinnerItem"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="69dp"
+        android:layout_marginTop="319dp"
+        android:layout_marginEnd="262dp"
+        android:layout_marginBottom="372dp"
+        android:text="null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtViewOption3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="69dp"
+        android:layout_marginTop="287dp"
+        android:layout_marginEnd="252dp"
+        android:layout_marginBottom="420dp"
+        android:text="WindSpeed"
+        android:textColor="#3F51B5"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtViewOption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="187dp"
+        android:layout_marginEnd="90dp"
+        android:layout_marginBottom="520dp"
+        android:text="Humidity"
+        android:textColor="#3F51B5"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_Hum"
+        style="@style/Widget.AppCompat.TextView.SpinnerItem"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="220dp"
+        android:layout_marginEnd="81dp"
+        android:layout_marginBottom="471dp"
+        android:text="null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtViewOption4"
+        android:layout_width="83dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="69dp"
+        android:layout_marginTop="369dp"
+        android:layout_marginEnd="259dp"
+        android:layout_marginBottom="332dp"
+        android:text="InDepth :"
+        android:textColor="#673AB7"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_Depth"
+        style="@style/Widget.AppCompat.TextView.SpinnerItem"
+        android:layout_width="172dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="159dp"
+        android:layout_marginTop="369dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="332dp"
+        android:shadowColor="#2B1E1E"
+        android:text="null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_Temp"
+        style="@style/Widget.AppCompat.TextView.SpinnerItem"
+        android:layout_width="90dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="69dp"
+        android:layout_marginTop="221dp"
+        android:layout_marginEnd="252dp"
+        android:layout_marginBottom="470dp"
+        android:text="null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtViewOption1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="69dp"
+        android:layout_marginTop="187dp"
+        android:layout_marginEnd="241dp"
+        android:layout_marginBottom="520dp"
+        android:text="Temperature"
+        android:textColor="#3F51B5"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_Enter"
+        style="@style/Widget.AppCompat.Button"
+        android:layout_width="142dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="217dp"
+        android:layout_marginTop="63dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="609dp"
+        android:text="ENTER"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edittxt_Location"
+        android:layout_width="160dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="53dp"
+        android:layout_marginTop="63dp"
+        android:layout_marginEnd="198dp"
+        android:layout_marginBottom="602dp"
+        android:ems="10"
+        android:hint="Derry"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtViewLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="53dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="304dp"
+        android:layout_marginBottom="668dp"
+        android:text="Location"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <WebView
+        android:id="@+id/webNasa"
+        android:layout_width="350dp"
+        android:layout_height="240dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="520dp"
+        android:layout_marginEnd="39dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_Title"
+        android:layout_width="349dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="474dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginBottom="240dp"
+        android:text="null"
+        android:textAlignment="center"
+        android:textColor="#009688"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_OnThisDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="443dp"
+        android:layout_marginBottom="290dp"
+        android:text="NASA Picture On This Day !"
+        android:textColor="#F44336"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
